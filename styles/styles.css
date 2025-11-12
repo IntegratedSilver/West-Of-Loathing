@@ -11,21 +11,35 @@
 /* ------------------- */
 /* Color and Font Vars */
 /* ------------------- */
-:root {
-  /* Define your color scheme here */
-  --color-primary: #333;   /* Dark color for text */
-  --color-secondary: #f4f4f4; /* Light color for background */
-  --color-accent: #007bff; /* An accent color for links/buttons */
 
-  /* Define your fonts here */
-  --font-heading: Georgia, serif;
-  --font-body: Arial, sans-serif;
+@font-face {
+  font-family: 'Sina';
+  src: url('/fonts/fonnts.com-SinaReg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+
+:root {
+  --color-primary: #333;
+  --color-secondary: #f4f4f4;
+  --color-accent: #007bff;
+
+  --font-heading: 'Sina', Georgia, serif;
+  --font-body: 'Sina', Arial, sans-serif;
+}
+
+
 
 
 /* ------------------- */
 /* Basic Body Styles   */
 /* ------------------- */
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-secondary);
@@ -94,7 +108,7 @@ hr {
 
 footer {
   text-align: center;
-  width: 100%;
+  width: 99%;
 }
 
 
@@ -102,20 +116,28 @@ footer {
 /* Content Styling     */
 /* ------------------- */
 h1, h2 {
-    font-family: var(--font-heading);
-    color: var(--color-primary);
+  font-family: var(--font-heading);
+  color: var(--color-primary);
 }
+
 
 header h1 {
     color: white; /* Overriding for the header */
+}
+h2{
+  color:red
 }
 
 a {
     color: var(--color-accent);
 }
 
-/* Make images responsive */
+p, a {
+  font-family: var(--font-body);
+}
 
+
+/* Make images responsive */
 
 
 
