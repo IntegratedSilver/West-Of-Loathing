@@ -139,6 +139,12 @@ p, a {
 
 /* Make images responsive */
 
+/* img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto; 
+} */
 
 
 
@@ -149,16 +155,36 @@ p, a {
 
 @media screen and (max-width: 600px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; 
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem; 
+}
 
   nav ul li {
-    display: block; /* Stack navigation links vertically */
+    display: block; 
     margin: 10px 0;
   }
 
   main {
       padding: 10px;
   }
+}
+
+/* adding some kind of animation for the extra credit */
+#tumbleweed {
+  position: fixed;
+  bottom: 20px;
+  left: -150px; /* start off-screen */
+  width: 100px;
+  opacity: 0;
+  transition: transform 8s linear, opacity 1s ease-in;
 }
